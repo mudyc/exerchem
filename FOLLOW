@@ -1,0 +1,10 @@
+The list of actions made by following rails 4 tutorial.
+
+# Create the broilerpate code
+$ rails new exerchem
+
+> Took a lot of time and lot of files were created.
+
+rails generate controller course index
+
+> Generated course controller
