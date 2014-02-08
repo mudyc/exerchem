@@ -1,0 +1,14 @@
+
+<h1>New part for <%= @course.course %></h1>
+
+<%= form_for :part, url: parts_path do |f| %>
+  <p>
+    <%= hidden_field_tag 'part[course_id]', @course.id %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

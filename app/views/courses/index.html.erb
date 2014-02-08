@@ -1,0 +1,13 @@
+<h1>Chemical Exercises</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+  </tr>
+ 
+  <% @courses.each do |course| %>
+    <tr>
+      <td><%= link_to course.course, course_path(course) %></td>
+    </tr>
+  <% end %>
+</table>

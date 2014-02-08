@@ -1,0 +1,13 @@
+<h1>Create exercise</h1>
+
+<%= form_for :exercise, url: exercises_path do |f| %>
+  <p>
+    <%= hidden_field_tag 'exercise[part_id]', @part.id %>
+    <%= f.label :title %>
+    <%= f.text_field :title %><br>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

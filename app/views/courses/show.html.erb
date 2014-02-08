@@ -1,0 +1,18 @@
+<p>
+  <strong>Course:</strong>
+  <%= @course.course %>
+</p>
+
+<table>
+  <tr>
+    <th>Parts</th>
+  </tr>
+ 
+  <% @course.parts.each do |part| %>
+    <tr>
+      <td><%= link_to part.title, part_path(part) %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to "Create new part", new_part_path(@course) %>

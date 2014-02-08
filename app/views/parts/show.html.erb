@@ -1,0 +1,7 @@
+<h1>Exercises for <%= @course.course%> - <%= @part.title %></h1>
+
+<% @part.exercises.each do |exercise| %>
+  <div><%= link_for exercise.title, path_to(exercise) %></div>
+<% end %>
+
+<%= link_to "Add exercise", new_exercise_path(@part) %>

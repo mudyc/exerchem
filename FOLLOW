@@ -5,6 +5,20 @@ $ rails new exerchem
 
 > Took a lot of time and lot of files were created.
 
-rails generate controller course index
+$ rails generate controller course index
 
 > Generated course controller
+
+> Create views for courses, e.g. show, index, new (no delete)
+
+$ rails generate model Part title:string course:references
+
+$ rails generate model Exercise title:string \
+	question:text facts:text conceptual_plan:text solution:text part:references
+
+$ rake db:migrate
+
+$ rails generate controller Parts
+
+$ rails generate controller Exercises
+

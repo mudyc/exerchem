@@ -1,0 +1,13 @@
+
+<h1>New course</h1>
+
+<%= form_for :course, url: courses_path do |f| %>
+  <p>
+    <%= f.label :course %><br>
+    <%= f.text_field :course %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
