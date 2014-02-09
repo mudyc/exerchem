@@ -1,7 +1,35 @@
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+});
+</script>
+
+<span style="display:none;">
+  <span id="exercise_id"><%= @exercise.id %></span>
+</span>
 
 <h1>Exercise for <%= "#{@part.course.course} - #{@part.title} - #{@exercise.title}" %></h1>
 
-<h2>Question</h2><%= button_tag 'Edit' %>
-<h2>Facts</h2><%= button_tag 'Edit' %>
-<h2>Conseptual plan</h2><%= button_tag 'Edit' %>
-<h2>Solution</h2><%= button_tag 'Edit' %>
+\[\int_a^b f(x) dx=F(b)-F(a)\]
+
+
+<H2>Question</h2>
+<%= button_tag 'Edit', { class: 'editclose' , data: { type: 'question' }} %>
+<div id="question"><%= @exercise.question %></div>
+<textarea id="edit-question"><%= @exercise.question %></textarea>
+
+
+<h2>Facts</h2>
+<%= button_tag 'Edit', { class: 'editclose' , data: { type: 'facts' }} %>
+<div id="facts"><%= @exercise.facts %></div>
+<textarea id="edit-facts"><%= @exercise.facts %></textarea>
+
+<h2>Conseptual plan</h2>
+<%= button_tag 'Edit', { class: 'editclose' , data: { type: 'conceptual_plan' }} %>
+<div id="conceptual_plan"><%= @exercise.conceptual_plan %></div>
+<textarea id="edit-conceptual_plan"><%= @exercise.conceptual_plan %></textarea>
+
+<h2>Solution</h2>
+<%= button_tag 'Edit', { class: 'editclose' , data: { type: 'solution' }} %>
+<div id="solution"><%= @exercise.solution %></div>
+<textarea id="edit-solution"><%= @exercise.solution %></textarea>

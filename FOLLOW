@@ -22,3 +22,19 @@ $ rails generate controller Parts
 
 $ rails generate controller Exercises
 
+> Everything seems to be ok, use sqlite3
+
+> Adding codemirror was rather easy.
+
+> Just add mathjax to rails gem an it worked by adding stuff in html!
+> Wooaahh!
+
+> Next was to learn some coffeescript to
+
+> jquery was already installed but need //=require in script file
+> Codemirror css file was missing, adding the default to 
+
+> Got codemirror syntax highlighting to work - great!
+> Got mathjax to reprocess code.
+
+> Now only visual design and posting to edit action is missing..

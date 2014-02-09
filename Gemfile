@@ -44,3 +44,8 @@ end
 # Use debugger
 #gem 'debugger', group: [:development, :test]
 gem 'pry', :group => :development
+
+# add codemirror
+gem "codemirror-rails", "~> 3.21"
+# Add MathJax
+gem "mathjax-rails", "~> 1.0.3"

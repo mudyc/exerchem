@@ -1,5 +1,7 @@
 Exerchem::Application.routes.draw do
 
+  mathjax "mathjax"
+
   resources :courses, :parts, :exercises
 
   root "courses#index"
