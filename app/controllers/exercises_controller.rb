@@ -16,4 +16,15 @@ class ExercisesController < ApplicationController
     @part = Part.find(@exercise.part_id)
   end
 
+  def update
+    @exercise = Exercise.find(params.permit(:id)[:id])
+    
+    params.permit(:question, :facts, :conceptual_plan, :solution).each { |key, value|
+      @exercise[key] = value
+    }
+    @exercise.save
+    
+    render :nothing => true, :status => 200, :content_type => 'text/html'
+  end
+
 end

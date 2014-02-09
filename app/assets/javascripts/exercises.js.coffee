@@ -17,8 +17,17 @@ $(document).ready(() ->
     cm.on('change', (cm, chg) ->
       content = cm.getValue()
       type = $(cm).data('type')
-      $('#'+type.split('-')[1]).text(content)
+      contentName = type.split('-')[1]
+      $('#'+contentName).text(content)
       MathJax.Hub.Queue(["Typeset",MathJax.Hub])
+
+      # create post message
+      msg = { }
+      msg[contentName] = content
+      $.ajax($('#put_url').text(), {
+        type: 'PUT',
+        data: msg
+      })
     )
     $(cm.getWrapperElement()).hide()
   )

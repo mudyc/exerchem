@@ -38,3 +38,4 @@ $ rails generate controller Exercises
 > Got mathjax to reprocess code.
 
 > Now only visual design and posting to edit action is missing..
+> posting editions was rather rails way. put update. stupid but works.

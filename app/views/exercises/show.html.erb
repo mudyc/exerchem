@@ -6,6 +6,7 @@ MathJax.Hub.Config({
 
 <span style="display:none;">
   <span id="exercise_id"><%= @exercise.id %></span>
+  <span id="put_url"><%= exercise_path(@exercise) %></span>
 </span>
 
 <h1>Exercise for <%= "#{@part.course.course} - #{@part.title} - #{@exercise.title}" %></h1>
