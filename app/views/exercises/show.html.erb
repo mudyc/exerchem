@@ -11,21 +11,18 @@ MathJax.Hub.Config({
 
 <h1>Exercise for <%= "#{@part.course.course} - #{@part.title} - #{@exercise.title}" %></h1>
 
-\[\int_a^b f(x) dx=F(b)-F(a)\]
 
-
-<H2>Question</h2>
+<h2>Question</h2>
 <%= button_tag 'Edit', { class: 'editclose' , data: { type: 'question' }} %>
 <div id="question"><%= @exercise.question %></div>
 <textarea id="edit-question"><%= @exercise.question %></textarea>
-
 
 <h2>Facts</h2>
 <%= button_tag 'Edit', { class: 'editclose' , data: { type: 'facts' }} %>
 <div id="facts"><%= @exercise.facts %></div>
 <textarea id="edit-facts"><%= @exercise.facts %></textarea>
 
-<h2>Conseptual plan</h2>
+<h2>Conceptual plan</h2>
 <%= button_tag 'Edit', { class: 'editclose' , data: { type: 'conceptual_plan' }} %>
 <div id="conceptual_plan"><%= @exercise.conceptual_plan %></div>
 <textarea id="edit-conceptual_plan"><%= @exercise.conceptual_plan %></textarea>

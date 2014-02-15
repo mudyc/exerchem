@@ -42,8 +42,6 @@ $(document).ready(() ->
     else
       $(this).text('Edit')
       $('#edit-'+type).next().slideUp()
-
-    console.log(type)
   )
 
 )

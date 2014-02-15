@@ -29,7 +29,7 @@ $ rails generate controller Exercises
 > Just add mathjax to rails gem an it worked by adding stuff in html!
 > Wooaahh!
 
-> Next was to learn some coffeescript to
+> Next was to learn some coffeescript to do the javascript editing.
 
 > jquery was already installed but need //=require in script file
 > Codemirror css file was missing, adding the default to 
