@@ -8,7 +8,7 @@ class CoursesController < ApplicationController
   end
 
   def create
-    @course = Course.new(params[:post].permit(:course))
+    @course = Course.new(params[:course].permit(:course))
     @course.save
     redirect_to @course
   end
