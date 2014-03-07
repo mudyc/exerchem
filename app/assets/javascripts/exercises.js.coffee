@@ -7,7 +7,6 @@
 //= require codemirror
 //= require codemirror/modes/stex
 
-console.log('testtt')
 $(document).ready(() ->
   for e in 'question facts conceptual_plan solution'.split(' ')
     elm = $('#'+e)
