@@ -2,15 +2,17 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
+//= require jquery
+//= require jquery.turbolinks
 //= require codemirror
 //= require codemirror/modes/stex
-//= require jquery
 
-
+console.log('testtt')
 $(document).ready(() ->
   for e in 'question facts conceptual_plan solution'.split(' ')
     elm = $('#'+e)
     elm.html(elm.text())
+  MathJax.Hub.Queue(["Typeset",MathJax.Hub])
 
   editors = $('#edit-question,#edit-facts,#edit-conceptual_plan,#edit-solution')
   editors.hide()
