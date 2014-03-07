@@ -8,6 +8,10 @@
 
 
 $(document).ready(() ->
+  for e in 'question facts conceptual_plan solution'.split(' ')
+    elm = $('#'+e)
+    elm.html(elm.text())
+
   editors = $('#edit-question,#edit-facts,#edit-conceptual_plan,#edit-solution')
   editors.hide()
 
@@ -18,7 +22,7 @@ $(document).ready(() ->
       content = cm.getValue()
       type = $(cm).data('type')
       contentName = type.split('-')[1]
-      $('#'+contentName).text(content)
+      $('#'+contentName).html(content)
       MathJax.Hub.Queue(["Typeset",MathJax.Hub])
 
       # create post message
